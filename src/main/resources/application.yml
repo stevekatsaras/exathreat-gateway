@@ -1,0 +1,16 @@
+server:
+  port: 5000
+spring:
+  application:
+    name: exathreat-gateway
+
+logging:
+  level:
+    root: ${log.level.root:OFF}
+    com.exathreat: ${log.level.app:INFO}
+
+# Below are the exathreat-gateway custom settings
+
+syslog:
+  port: 1514
+  buffer: 8192 # 8kb
