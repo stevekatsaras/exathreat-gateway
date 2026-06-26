@@ -27,18 +27,18 @@ To remove your dangling images:
 *. docker rmi -f $(docker images --filter dangling=true)
 
 To authenticate docker to your AWS ECR registry:
-*. aws ecr get-login-password --region ap-southeast-2 | docker login --username AWS --password-stdin 367480315855.dkr.ecr.ap-southeast-2.amazonaws.com
+*. aws ecr get-login-password --region ap-southeast-2 | docker login --username AWS --password-stdin <AWS_ACCOUNT_ID>.dkr.ecr.ap-southeast-2.amazonaws.com
 
 ---
 
 To tag your docker image to your ECR repository in AWS:
-*. docker tag exathreat-gateway 367480315855.dkr.ecr.ap-southeast-2.amazonaws.com/exathreat-gateway
+*. docker tag exathreat-gateway <AWS_ACCOUNT_ID>.dkr.ecr.ap-southeast-2.amazonaws.com/exathreat-gateway
 
 To push your tagged docker image to your ECR repository in AWS:
-*. docker push 367480315855.dkr.ecr.ap-southeast-2.amazonaws.com/exathreat-gateway
+*. docker push <AWS_ACCOUNT_ID>.dkr.ecr.ap-southeast-2.amazonaws.com/exathreat-gateway
 
 To pull your docker image from your ECR repository in AWS:
-*. docker pull 367480315855.dkr.ecr.ap-southeast-2.amazonaws.com/exathreat-gateway
+*. docker pull <AWS_ACCOUNT_ID>.dkr.ecr.ap-southeast-2.amazonaws.com/exathreat-gateway
 
 -------------
 
